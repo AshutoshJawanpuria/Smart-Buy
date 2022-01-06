@@ -208,10 +208,12 @@ def counter(request):
      plain_text = source_code_a.text
      soup_a = BeautifulSoup(plain_text, "html.parser")
      err="Error"
+     title="error_title"
      for check in soup_a.find_all('h4'):
       err= check.text
-
-     if(err=="Type the characters you see in this image:"):
+     for errtit in soup_a.find_all('title'):
+       title=errtit.text
+     if(err=="Type the characters you see in this image:")or(title=="503 - Service Unavailable Error"):
        time.sleep(0.5*(randint(4,8)))
        print(err)
        continue
