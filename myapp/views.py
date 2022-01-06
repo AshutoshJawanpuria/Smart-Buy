@@ -214,14 +214,15 @@ def counter(request):
      for errtit in soup_a.find_all('title'):
        title=errtit.text
      if(err=="Type the characters you see in this image:")or(title=="503 - Service Unavailable Error"):
-       time.sleep(0.5*(randint(4,8)))
+       time.sleep(0.5*(randint(1,5)))
        print(err)
        continue
      else:
+       print(title)
        break
 
 
-    # print(soup_a)
+    #print(soup_a)
 
     for html in soup_a.find_all('div', {'class': 'sg-col-inner'}):
             title, link, pic = None, None , None
