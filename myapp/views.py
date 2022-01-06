@@ -240,7 +240,7 @@ def counter(request):
             print(title,link,price,pic)
             # if pic == None:
             #   pic = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
-            if title and pic and link:
+            if title and pic and link :
              map_a[title] = [price, link , pic]
     a_prod_id1 = products() 
     a_prod_id2 = products() 
