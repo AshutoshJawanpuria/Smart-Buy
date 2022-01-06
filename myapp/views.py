@@ -66,6 +66,13 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def add_to_cart(request):
+    username = request.GET['username']
+    productid = request.GET['productid']
+    productlink = request.GET['productlink']
+    productpic = request.GET['productpic']
+    return render(request,'mylist.html',{'username': username,'productid': productid,'productlink': productlink,'productpic': productpic})
   
 def counter(request):
     #Taking Input form Webpage
@@ -103,78 +110,84 @@ def counter(request):
               pic = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
             map_f[title] = [price, link, pic]
     l = 0
-    flip_prod_id1 = products() 
-    flip_prod_id2 = products() 
-    flip_prod_id3 = products() 
-    flip_prod_id4 = products() 
-    flip_prod_id5 = products()
-    flip_prod_id6 = products() 
+    f_prod_id1 = products() 
+    f_prod_id2 = products() 
+    f_prod_id3 = products() 
+    f_prod_id4 = products() 
+    f_prod_id5 = products()
+    f_prod_id6 = products() 
     for i in map_f:
       if l == 1:
-        flip_prod_id1.id = i
+        f_prod_id1.id = i
+        f_prod_id1.site = 0
         ct = 1
         for j in map_f[i]:
            if ct == 1:
-            flip_prod_id1.price = j
+            f_prod_id1.price = j
            elif ct == 2:
-            flip_prod_id1.link = j
+            f_prod_id1.link = j
            elif ct == 3:
-            flip_prod_id1.pic = j
+            f_prod_id1.pic = j
            ct += 1
       if l == 2:
-        flip_prod_id2.id = i
+        f_prod_id2.id = i
+        f_prod_id2.site = 0
         ct = 1
         for j in map_f[i]:
            if ct == 1:
-            flip_prod_id2.price = j
+            f_prod_id2.price = j
            elif ct == 2:
-            flip_prod_id2.link = j
+            f_prod_id2.link = j
            elif ct == 3:
-            flip_prod_id2.pic = j
+            f_prod_id2.pic = j
            ct += 1
       if l == 3:
-        flip_prod_id3.id = i
+        f_prod_id3.id = i
+        f_prod_id3.site = 0
         ct = 1
         for j in map_f[i]:
            if ct == 1:
-            flip_prod_id3.price = j
+            f_prod_id3.price = j
            elif ct == 2:
-            flip_prod_id3.link = j
+            f_prod_id3.link = j
            elif ct == 3:
-            flip_prod_id3.pic = j
+            f_prod_id3.pic = j
            ct += 1
       if l == 4:
-        flip_prod_id4.id = i
+        f_prod_id4.id = i
+        f_prod_id4.site = 0
         ct = 1
         for j in map_f[i]:
            if ct == 1:
-            flip_prod_id4.price = j
+            f_prod_id4.price = j
            elif ct == 2:
-            flip_prod_id4.link = j
+            f_prod_id4.link = j
            elif ct == 3:
-            flip_prod_id4.pic = j
+            f_prod_id4.pic = j
            ct += 1
       if l == 5:
-        flip_prod_id5.id = i
+        f_prod_id5.id = i
+        f_prod_id5.site = 0
         ct = 1
         for j in map_f[i]:
            if ct == 1:
-            flip_prod_id5.price = j
+            f_prod_id5.price = j
            elif ct == 2:
-            flip_prod_id5.link = j
+            f_prod_id5.link = j
            elif ct == 3:
-            flip_prod_id5.pic = j
+            f_prod_id5.pic = j
            ct += 1
       if l == 6:
-        flip_prod_id6.id = i
+        f_prod_id6.id = i
+        f_prod_id6.site = 0
         ct = 1
         for j in map_f[i]:
            if ct == 1:
-            flip_prod_id6.price = j
+            f_prod_id6.price = j
            elif ct == 2:
-            flip_prod_id6.link = j
+            f_prod_id6.link = j
            elif ct == 3:
-            flip_prod_id6.pic = j
+            f_prod_id6.pic = j
            ct += 1
       l += 1
     
@@ -254,6 +267,7 @@ def counter(request):
     for i in map_a:
       if l == 1:
         a_prod_id1.id = i
+        a_prod_id1.site = 1
         ct = 1
         for j in map_a[i]:
            if ct == 1:
@@ -265,6 +279,7 @@ def counter(request):
            ct += 1
       if l == 2:
         a_prod_id2.id = i
+        a_prod_id2.site = 1
         ct = 1
         for j in map_a[i]:
            if ct == 1:
@@ -276,6 +291,7 @@ def counter(request):
            ct += 1
       if l == 3:
         a_prod_id3.id = i
+        a_prod_id3.site = 1
         ct = 1
         for j in map_a[i]:
            if ct == 1:
@@ -287,6 +303,7 @@ def counter(request):
            ct += 1
       if l == 4:
         a_prod_id4.id = i
+        a_prod_id4.site = 1
         ct = 1
         for j in map_a[i]:
            if ct == 1:
@@ -298,6 +315,7 @@ def counter(request):
            ct += 1
       if l == 5:
         a_prod_id5.id = i
+        a_prod_id5.site = 1
         ct = 1
         for j in map_a[i]:
            if ct == 1:
@@ -308,10 +326,10 @@ def counter(request):
             a_prod_id5.pic = j
            ct += 1
       l += 1
-    flip_pord_list = [flip_prod_id1,a_prod_id1,flip_prod_id2,a_prod_id2,flip_prod_id3,a_prod_id3,flip_prod_id4,a_prod_id4,flip_prod_id5,a_prod_id5]
-    for i in flip_pord_list:
-       pass
-    #return render(request,'counter.html',{'prod_id1': prod_id1,'prod_id2': prod_id2,'prod_id3': prod_id3,'prod_id4': prod_id4,'prod_id5': prod_id5})
-    return render(request,'counter.html',{'flip_pord_list': flip_pord_list})
+    # flip_pord_list = [f_prod_id1,a_prod_id1,f_prod_id2,a_prod_id2,f_prod_id3,a_prod_id3,f_prod_id4,a_prod_id4,f_prod_id5,a_prod_id5]
+    # for i in flip_pord_list:
+    #     pass
+    return render(request,'counter.html',{'f_prod_id1': f_prod_id1,'f_prod_id2': f_prod_id2,'f_prod_id3': f_prod_id3,'f_prod_id4': f_prod_id4,'f_prod_id5': f_prod_id5,'f_prod_id6': f_prod_id6,'a_prod_id1': a_prod_id1,'a_prod_id2': a_prod_id2,'a_prod_id3': a_prod_id3,'a_prod_id4': a_prod_id4,'a_prod_id5': a_prod_id5})
+    # return render(request,'counter.html',{'flip_pord_list': flip_pord_list})
     #title = soup.title
     #return render(request,'counter.html',{'products': prod_id}) 

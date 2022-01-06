@@ -10,3 +10,4 @@ class products:
     price: str
     link: str
     pic: str
+    site : int
