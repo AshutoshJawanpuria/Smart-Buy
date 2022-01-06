@@ -240,7 +240,7 @@ def counter(request):
 
             for pi in html.find_all('img', {'class': 's-image'}):
                 pic = pi.get('src')
-            print(title,link,price,pic)
+            #print(title,link,price,pic)
             # if pic == None:
             #   pic = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
             if title and pic and link :
