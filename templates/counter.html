@@ -30,11 +30,30 @@ img {
                                         <button type="button" class="btn btn-outline-primary">Log In</button> -->
                                         <!-- <button class="btn btn-outline-primary mr-1" href="#">Sign up</button>
                                         <button class="btn btn-outline-primary" href="#">Login</button> -->
-                                        <!-- <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button class="btn btn-outline-primary mr-1" href="#">Sign up</button>
+                                        {% if user.is_authenticated %}
+                                        <!-- <form action="logout" method="GET">
+                                            <button type="submit" class="btn btn-outline-primary" >Log Out</button>
+                                        </form> -->
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <form action="" method="GET">
+                                             <button type="submit" class="btn btn-outline-primary" >My Cart</button>
+                                            </form>
+                                            <form action="logout" method="GET">
+                                            <button type="submit" class="btn btn-outline-primary" >Log Out</button>
+                                             </form>
+                                        {% else %}
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                        <form action="register" method="GET">
+                                         <button type="submit" class="btn btn-outline-primary" >Sign up</button>
+                                        </form>
+                                        <form action="login" method="GET">
+                                        <button type="submit" class="btn btn-outline-primary" >Log In</button>
+                                         </form>
+                                        <!-- <button type="submit" btn btn-outline-primary mr-1" href="register">Sign up</button>
                                         <button class="btn btn-outline-primary" href="#">Log In</button> -->
                                             <!-- <button type="button" class="btn btn-secondary">Right</button> -->
-                                        <!-- </div> -->
+                                        </div>
+                                        {% endif %}
                                         <!-- <button type="button" class="btn btn-outline-warning">Log In</button>
                                         <button type="button" class="btn btn-outline-warning">Sign up</button> -->
                                     </div>
@@ -56,17 +75,28 @@ img {
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                         <div class="media-body order-2 order-lg-1">
-                            <h5 class="mt-0 font-weight-bold mb-2">{{i.id}}</h5>
-                            <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p>
+                            <a style="text-decoration: none;color: black;" href={{i.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{i.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
                             <div class="d-flex align-items-center justify-content-between mt-1">
                                 <h6 class="font-weight-bold my-2">₹ {{i.price}}</h6>
-                                <ul class="list-inline small">
+                                <!-- <ul class="list-inline small">
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
-                                </ul>
+                                </ul> -->
+                                {% if user.is_authenticated %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
                             </div>
                         </div><img src={{i.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
                     </div> <!-- End -->

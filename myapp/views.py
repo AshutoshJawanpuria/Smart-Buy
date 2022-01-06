@@ -214,7 +214,7 @@ def counter(request):
      for errtit in soup_a.find_all('title'):
        title=errtit.text
      if(err=="Type the characters you see in this image:")or(title=="503 - Service Unavailable Error"):
-       time.sleep(0.5*(randint(4,8)))
+       time.sleep(0.5*(randint(1,6)))
        print(err)
        continue
      else:
@@ -239,7 +239,7 @@ def counter(request):
 
             for pi in html.find_all('img', {'class': 's-image'}):
                 pic = pi.get('src')
-            print(title,link,price,pic)
+            #print(title,link,price,pic)
             # if pic == None:
             #   pic = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
             if title and pic and link :
