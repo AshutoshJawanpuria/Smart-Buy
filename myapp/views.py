@@ -153,7 +153,7 @@ def counter(request):
           for l in box.find_all('a',{'class':'_2rpwqI'}):
             link=home_f+l.get('href')
           for pr in box.find('div',{'class':'_30jeq3'}):
-            price=pr.text
+            price=pr.text[1:]
           for h in box.find('a',{'class':'s1Q9rs'}):
             title=h.text
           # if pic == None:
