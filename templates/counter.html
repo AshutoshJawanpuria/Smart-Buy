@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
                         <html>
                             <head>
@@ -35,7 +36,7 @@ img {
                                             <button type="submit" class="btn btn-outline-primary" >Log Out</button>
                                         </form> -->
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <form action="" method="GET">
+                                            <form action="" method="POST">
                                              <button type="submit" class="btn btn-outline-primary" >My Cart</button>
                                             </form>
                                             <form action="logout" method="GET">
@@ -65,22 +66,22 @@ img {
             <h1 class="display-4">Product List</h1>
         </div>
     </div>
+
     <div class="row">
         <div class="col-lg-8 mx-auto">
             <!-- List group-->
             <ul class="list-group shadow">
                 <!-- list group item-->
-                {% for i in flip_pord_list %}
                 <li class="list-group-item">
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                         <div class="media-body order-2 order-lg-1">
-                            <a style="text-decoration: none;color: black;" href={{i.link}} target="_blank">
-                            <h5 class="mt-0 font-weight-bold mb-2">{{i.id|truncatewords:15}}</h5>
+                            <a style="text-decoration: none;color: black;" href={{f_prod_id1.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{f_prod_id1.id|truncatewords:15}}</h5>
                             </a>
                             <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
                             <div class="d-flex align-items-center justify-content-between mt-1">
-                                <h6 class="font-weight-bold my-2">₹ {{i.price}}</h6>
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{f_prod_id1.price}}</h5>
                                 <!-- <ul class="list-inline small">
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
@@ -88,23 +89,452 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
-                                <form action="register" method="GET">
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id1.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id1.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id1.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
-                                </form>
+                                    </form>
                                 {% else %}
                                 <form action="register" method="GET">
                                     <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
                                 </form>
                                 {% endif %}
                             </div>
-                        </div><img src={{i.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                        </div><img src={{f_prod_id1.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
                     </div> <!-- End -->
                 </li> <!-- End -->
-                {% endfor %}
             </ul> <!-- End -->
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{a_prod_id1.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{a_prod_id1.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{a_prod_id1.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id1.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id1.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id1.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{a_prod_id1.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{f_prod_id2.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{f_prod_id2.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{f_prod_id2.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id2.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id2.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id2.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{f_prod_id2.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{a_prod_id2.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{a_prod_id2.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{a_prod_id2.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id2.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id2.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id2.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{a_prod_id2.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{f_prod_id3.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{f_prod_id3.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{f_prod_id3.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id3.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id3.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id3.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{f_prod_id3.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{a_prod_id3.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{a_prod_id3.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{a_prod_id3.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id3.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id3.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id3.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{a_prod_id3.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{f_prod_id4.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{f_prod_id4.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{f_prod_id4.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id4.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id4.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id4.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{f_prod_id4.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{a_prod_id4.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{a_prod_id4.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{a_prod_id4.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id4.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id4.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id4.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{a_prod_id4.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{f_prod_id5.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{f_prod_id5.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{f_prod_id5.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id5.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id5.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id5.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{f_prod_id5.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group-->
+            <ul class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <a style="text-decoration: none;color: black;" href={{a_prod_id5.link}} target="_blank">
+                            <h5 class="mt-0 font-weight-bold mb-2">{{a_prod_id5.id|truncatewords:15}}</h5>
+                            </a>
+                            <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{a_prod_id5.price}}</h5>
+                                <!-- <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                {% if user.is_authenticated %}
+                                <form action="add_to_cart" method="GET">
+                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id5.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id5.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id5.pic}}"/>
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    </form>
+                                {% else %}
+                                <form action="register" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div><img src={{a_prod_id5.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+        </div>
+    </div>
+
+    <!-- <div class="col-md-4">
+        <div class="card mt-3">
+            <div class="product-1 align-items-center p-2 text-center"> <img src={{flip_prod_id1.pic}} >
+                <h5>{{flip_prod_id1.id}}</h5>
+                <div class="mt-3 info"> <span class="text1 d-block">Garnier Pure Active Miceller</span> <span class="text1">cleansing water. 125 ml </span> </div>
+                <div class=" watchcost mt-3 text-dark"> <span></span>
+                    <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                </div>
+                {% if user.is_authenticated %}
+                <form action="add_to_cart" method="GET">
+                <input type="hidden" name="username" id="username" value="{{user.username}}"/>
+                <input type="hidden" name="productid" id="productid" value="{{flip_prod_id1.id}}"/>
+                <input type="hidden" name="productlink" id="productlink" value="{{flip_prod_id1.link}}"/>
+                <input type="hidden" name="productpic" id="productpic" value="{{flip_prod_id1.pic}}"/>
+                <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                </form>
+                {% else %}
+                <form action="register" method="GET">
+                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                </form>
+                {% endif %}
+            </div>
+            <div class="watch p-3 text-center text-white mt-3 cursor"> <span class="text-uppercase ">Add to cart</span> </div>
+        </div>
+    </div> -->
+    
+
 </div>
                                 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
                                 <script type='text/javascript' src=''></script>
