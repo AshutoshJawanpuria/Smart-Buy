@@ -36,8 +36,10 @@ img {
                                             <button type="submit" class="btn btn-outline-primary" >Log Out</button>
                                         </form> -->
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <form action="" method="POST">
+                                            <form action="My_Cart" method="GET">
+                                             <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                              <button type="submit" class="btn btn-outline-primary" >My Cart</button>
+                                             
                                             </form>
                                             <form action="logout" method="GET">
                                             <button type="submit" class="btn btn-outline-primary" >Log Out</button>

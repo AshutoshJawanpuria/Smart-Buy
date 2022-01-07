@@ -14,6 +14,7 @@ import random
 import time
 from .models import products
 from random import randint
+import pymongo
 
 # Create your views here.
 def index(request):
@@ -72,8 +73,33 @@ def add_to_cart(request):
     productid = request.GET['productid']
     productlink = request.GET['productlink']
     productpic = request.GET['productpic']
-    return render(request,'mylist.html',{'username': username,'productid': productid,'productlink': productlink,'productpic': productpic})
+    client=pymongo.MongoClient("mongodb://localhost:27017/")
+    db=client[username]
+    collection=db['products']
+    dictionary={'link': productlink,'title': productid,'image':productpic}
+    ispresent=collection.find_one({'link' :productlink})
+    if(ispresent==None): 
+     collection.insert_one(dictionary)
+    return render(request,'mylist1.html',{'username': username,'productid': productid,'productlink': productlink,'productpic': productpic})
+
+def My_Cart(request):
+   username=request.GET['username']
+   client=pymongo.MongoClient("mongodb://localhost:27017/")
+   db=client[username]
+   collection=db['products']
+   Product_list=collection.find()
+   mycart=[]
+   for product in Product_list:
+      cart_product=products()
+      cart_product.id=product['title']
+      cart_product.link=product['link']
+      cart_product.pic=product['image']
+      print(product)
+      mycart.append(cart_product)
   
+   return render(request,'mylist.html',{'mycart' : mycart})
+
+
 def counter(request):
     #Taking Input form Webpage
     text = request.POST['text']

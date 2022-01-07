@@ -1,4 +1,5 @@
-<h1>{{username}}</h1>
-<h1>{{productid}}</h1>
-<h1>{{productpic}}</h1>
-<h1>{{productlink}}</h1>
+{%for products in mycart%}
+<h1>{{products.id}}</h1>
+<h1>{{products.link}}</h1>
+<h1>{{products.pic}}</h1>
+{%endfor}
