@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
                         <html>
                             <head>
@@ -88,7 +89,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="https://www.logosurfer.com/wp-content/uploads/2018/03/flipkart-logo_1.png" alt="Flipkart Logo" style="width: 80px;;height:50px;" />
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -132,7 +133,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="https://www.logosurfer.com/wp-content/uploads/2018/03/amazon-logo_1.png" alt="Amazon Logo" style="width: 80px;;height:50px;" />
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -176,6 +177,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -220,6 +222,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -263,6 +266,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -306,6 +310,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -349,6 +354,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -392,6 +398,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -435,6 +442,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -478,6 +486,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
