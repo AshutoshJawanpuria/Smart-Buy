@@ -87,9 +87,8 @@ def My_Cart(request):
    client=pymongo.MongoClient("mongodb://localhost:27017/")
    db=client[username]
    collection=db['products']
-   Product_list=collection.find()
    mycart=[]
-   for product in Product_list:
+   for product in collection.find():
       cart_product=products()
       cart_product.id=product['title']
       cart_product.link=product['link']
