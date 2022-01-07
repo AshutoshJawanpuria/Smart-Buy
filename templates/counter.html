@@ -135,7 +135,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -224,7 +224,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -312,7 +312,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -400,7 +400,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -488,7 +488,7 @@ img {
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul> -->
-                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 65px;;height:25px;" />
+                                <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form action="add_to_cart" method="GET">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
@@ -509,33 +509,6 @@ img {
             </ul> <!-- End -->
         </div>
     </div>
-
-    <!-- <div class="col-md-4">
-        <div class="card mt-3">
-            <div class="product-1 align-items-center p-2 text-center"> <img src={{flip_prod_id1.pic}} >
-                <h5>{{flip_prod_id1.id}}</h5>
-                <div class="mt-3 info"> <span class="text1 d-block">Garnier Pure Active Miceller</span> <span class="text1">cleansing water. 125 ml </span> </div>
-                <div class=" watchcost mt-3 text-dark"> <span></span>
-                    <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
-                </div>
-                {% if user.is_authenticated %}
-                <form action="add_to_cart" method="GET">
-                <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                <input type="hidden" name="productid" id="productid" value="{{flip_prod_id1.id}}"/>
-                <input type="hidden" name="productlink" id="productlink" value="{{flip_prod_id1.link}}"/>
-                <input type="hidden" name="productpic" id="productpic" value="{{flip_prod_id1.pic}}"/>
-                <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
-                </form>
-                {% else %}
-                <form action="register" method="GET">
-                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
-                </form>
-                {% endif %}
-            </div>
-            <div class="watch p-3 text-center text-white mt-3 cursor"> <span class="text-uppercase ">Add to cart</span> </div>
-        </div>
-    </div> -->
-    
 
 </div>
                                 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
