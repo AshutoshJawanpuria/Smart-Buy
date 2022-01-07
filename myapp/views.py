@@ -231,7 +231,7 @@ def counter(request):
        print(err)
        continue
      else:
-       print(title)
+       #print(title)
        break
 
 
