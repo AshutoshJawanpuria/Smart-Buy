@@ -80,10 +80,16 @@ def add_to_cart(request):
     client=pymongo.MongoClient("mongodb://localhost:27017/")
     db=client[username]
     collection=db['products']
-    dictionary={'link': productlink,'title': productid,'image':productpic}
-    ispresent=collection.find_one({'link' :productlink})
-    if(ispresent==None): 
-     collection.insert_one(dictionary)
+    dictionary={'link':productlink,'title':productid,'image':productpic}
+    #ispresent=None
+    ispresent=collection.find({'title': productid})
+    print(ispresent)
+    counter=collection.count_documents({'title': productid})
+    print(counter)
+    # for item in ispresent:
+    #  print(item)
+    if(counter==0): 
+      collection.insert_one(dictionary)
     return HttpResponse('Item Added to Cart')
 
 def My_Cart(request):
@@ -91,7 +97,9 @@ def My_Cart(request):
    client=pymongo.MongoClient("mongodb://localhost:27017/")
    db=client[username]
    collection=db['products']
+   map_m=defaultdict(list)
    mycart=[]
+   mycart1=[]
    for product in collection.find():
       cart_product=products()
       cart_product.id=product['title']
@@ -99,6 +107,17 @@ def My_Cart(request):
       cart_product.pic=product['image']
       #print(product)
       mycart.append(cart_product)
+  #     map_m[product['link']]=[cart_product]
+  #  for links in collection.distinct('link'):
+  #       print(links)
+  #       product=collection.find_one({'link':links})
+  #       cart_product=products()
+  #       cart_product.id=product['title']
+  #       cart_product.link=product['link']
+  #       cart_product.pic=product['image']
+  #       mycart1.append(cart_product)
+
+  #     print(product)
   
    return render(request,'mylist.html',{'mycart' : mycart})
 
