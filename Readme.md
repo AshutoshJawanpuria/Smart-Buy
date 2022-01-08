@@ -13,12 +13,11 @@
     <br />
     <!-- <a href="https://github.com/github_username/repo_name">View Demo</a>
     · -->
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://www.linkedin.com/in/chandrachud-shrivastava-2b1680201/">Request Feature</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://www.linkedin.com/in/ashutosh-jawanpuria-898166177/">Report Bug</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -31,6 +30,10 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#MILESTONES-ACHIEVED">MILESTONES ACHIEVED</a></li>
+    <li><a href="#UNIQUE">UNIQUE</a></li>
+    <li><a href="#Team">Team</a></li>
+    <li><a href="#Domain-Of-Project">Domain Of Project</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -38,11 +41,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><li><a href="#SCOPE-OF-IMPROVEMENT">SCOPE OF IMPROVEMENT</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#SCOPE-OF-IMPROVEMENT">SCOPE OF IMPROVEMENT</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -54,16 +53,33 @@
 Smart Buy is an E-Commerce Website that Helps Users to compare prices of different products across the internet.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites. All this data is then tailored in a structured manner for easy understanding.
 <br/>
 Users Can Also Create Profiles and Save the Products or Can Order Them directly.
+<br/>
+The Project mainly consist of three parts.First one is Web Scraping Python script which uses BeautifulSoup for fetching data from Different E-Commerce Websites.
+We Have Used Django framework for integrating the Python Script with Webpages.We have also Used Django For user Signup and Authentication and for maintaining User's Database.
+For Product Database we Have Used Mongodb as it has PyMongo library which stores Data In dictionary like format which can easily be accessed.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Team Name : #include
+## MILESTONES ACHIEVED
+* Flipkart Search - Product Search and its image and URL Display
+* Amazon Search - Product Search and its image and URL Display
+* Used Django framework For Running Web scraping Python Script At Backend.
+* Added "Add To Card" Feature. 
+* Used Mongodb as Database For Saving Products.
+* Used Django Models For User Sign up and Authentication.
+
+## Unique
+   Initially We got stuck in product scraping at Amazon.The E-commerce websites such as Amazon and Flipkart have different structure for electronic and household products.We Corrected It using Two for Loops for covering maximum range of products.Additionally Due to High Security At Amazon Our Requests were often blocked.We fixed This Issue By Sending Requests at random time intervals.
+
+## Team : #include
 
 *  Chandrachud Shrivastava
 *  Ashutosh Jawanpuria
 *  Chirag Jha
 
-## Domain Of Project :
+## Domain Of Project
 *  Web development
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
 
@@ -97,14 +113,10 @@ To get a local copy up and running follow these simple example steps.
   ```sh
   pip install pymongo
   ```
-
-
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Installation
 
-Our Website is Hosted On Heroku [https://example.com](https://example.com)
-Or You Can
 1. Clone the repo
    ```sh
    git clone https://github.com/AshutoshJawanpuria/Smart-Buy.git
@@ -125,18 +137,6 @@ Or You Can
 Search Results can be made More Accurate with help of different algorithms.
 <br/>
 Webpages can be made more attractive and interactive.
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
