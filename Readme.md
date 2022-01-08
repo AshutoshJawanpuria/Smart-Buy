@@ -3,11 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">Smart Buy</h3>
+<h2 align="center">Smart Buy</h2>
 
   <p align="center">
     Smart Buy helps users to Compare Products across different E-Commerce websites like Amazon & Flipkart.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites.
@@ -70,7 +66,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Domain Of Project : Web development
 
-### TECH STACK
+### TECH STACK USED
 
 * [Python](https://www.python.org)
 * [Bootstrap](https://getbootstrap.com)
@@ -90,6 +86,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 * Python
+* MongoDB
 * Beautiful Soup
   ```sh
   pip install beautifulsoup4
@@ -102,24 +99,23 @@ To get a local copy up and running follow these simple example steps.
   ```sh
   pip install pymongo
   ```
-* MongoDB
+
 
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Our Website is Hosted On Heroku [https://example.com](https://example.com)
+Or You Can
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/AshutoshJawanpuria/Smart-Buy.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2. Install the Packages Mentioned in Prerequisites
+3. Using A Terminal in Directory of The Project Run the Following Command -
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   python manage.py runserver
    ```
+4. Now that the server’s running, visit http://127.0.0.1:8000/ with your web browser.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -165,17 +161,6 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
