@@ -31,6 +31,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#Team-name">Team</a></li>
+    <li><a href="#Domain-Of-Project">Domain Of Project</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -39,7 +41,6 @@
       </ul>
     </li>
     <li><a href="#SCOPE-OF-IMPROVEMENT">SCOPE OF IMPROVEMENT</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -53,7 +54,7 @@ Smart Buy is an E-Commerce Website that Helps Users to compare prices of differe
 Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Team Name : #include
+## Team : #include
 
 *  Chandrachud Shrivastava
 *  Ashutosh Jawanpuria
