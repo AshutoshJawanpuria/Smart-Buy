@@ -125,19 +125,47 @@ def counter(request):
     source_code_f = requests.get(url_f,headers = headers_f)
     soup_f = BeautifulSoup(source_code_f.text, "html.parser")
     home_f = 'https://www.flipkart.com'
+    ctr=1
     for block in soup_f.find_all('div', {'class': '_2kHMtA'}):
             title, price, link , pic = None, 'Currently Unavailable', None , None
             for heading in block.find_all('div', {'class': '_4rR01T'}):
                 title = heading.text
+                if(title!=None):
+                  ctr=0
+                
+                 
             for p in block.find_all('div', {'class': '_30jeq3 _1_WHN1'}):
                 price = p.text[1:]
             for l in block.find_all('a', {'class': '_1fQZEK'}):
                 link = home_f + l.get('href')
             for pi in block.find_all('img', {'class': '_396cs4 _3exPp9'}):
                 pic = pi.get('src')
+            # if(ctr==1):
+            #   break
+
             if pic == None:
               pic = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
             map_f[title] = [price, link, pic]
+    if(ctr==1):
+      print("counter equas 1")
+      title, price, link , pic = None, 'Currently Unavailable', None , None
+      for block in soup_f.find_all('div',{'class':'_1AtVbE col-12-12'}):
+        for box in block.find_all('div',{'class':'_4ddWXP'}):
+          for p in box.find_all('img',{'class':'_396cs4 _3exPp9'}):
+            pic=p.get('src')
+            #print(pic)
+          for l in box.find_all('a',{'class':'_2rpwqI'}):
+            link=home_f+l.get('href')
+          for pr in box.find('div',{'class':'_30jeq3'}):
+            price=pr.text[1:]
+          for h in box.find('a',{'class':'s1Q9rs'}):
+            title=h.text
+          # if pic == None:
+          #     pic = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+          map_f[title] = [price, link, pic]
+
+
+
     l = 0
     f_prod_id1 = products() 
     f_prod_id2 = products() 
