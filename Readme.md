@@ -11,8 +11,8 @@
     <a href="https://github.com/AshutoshJawanpuria/Smart-Buy.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
+    <!-- <a href="https://github.com/github_username/repo_name">View Demo</a>
+    · -->
     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
     ·
     <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
@@ -51,11 +51,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
-
+Smart Buy is an E-Commerce Website that Helps Users to compare prices of different products across the internet.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites. All this data is then tailored in a structured manner for your easy understanding.
+Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Team Name : #include
@@ -66,7 +63,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Domain Of Project : Web development
 
-### TECH STACK USED
+## TECH STACK USED
 
 * [Python](https://www.python.org)
 * [Bootstrap](https://getbootstrap.com)
