@@ -122,7 +122,9 @@ Or You Can
 
 <!-- USAGE EXAMPLES -->
 ## SCOPE OF IMPROVEMENT
-Search Results can be made More Accurate with help of different algorithms.Webpages can be made more attractive and interactive.
+Search Results can be made More Accurate with help of different algorithms.
+<br/>
+Webpages can be made more attractive and interactive.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
@@ -140,6 +142,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 We'd like to thank IEEE BIT Mesra for This Megaproject Event.
+<br/>
 We'd like to thank Our Mentor Utkarsh Singh for his insightful advice regarding our Project.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
