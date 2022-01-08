@@ -60,7 +60,7 @@ Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 *  Ashutosh Jawanpuria
 *  Chirag Jha
 
-## Domain Of Project :
+## Domain Of Project
 *  Web development
 
 ## Built With
