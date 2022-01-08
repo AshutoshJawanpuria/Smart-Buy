@@ -75,8 +75,8 @@ def add_to_cart(request):
     productpic = request.POST.get('productpic', None)
     print(username)
     print(productid)
-    # print(productlink)
-    # print(productpic)
+    print(productlink)
+    #print(productpic)
     client=pymongo.MongoClient("mongodb://localhost:27017/")
     db=client[username]
     collection=db['products']

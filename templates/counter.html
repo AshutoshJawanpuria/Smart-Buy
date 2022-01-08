@@ -96,12 +96,12 @@ img {
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form1" method="POST">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id1.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id1.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id1.pic}}"/>
+                                    <input type="hidden" name="username" id="username1" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid1" value="{{f_prod_id1.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink1" value="{{f_prod_id1.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic1" value="{{f_prod_id1.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" id="button1">Add to cart</button>
-                                    </form>
+                                </form>
                                 {% else %}
                                 <form action="register" method="GET">
                                     <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
@@ -140,10 +140,10 @@ img {
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form2" method="POST">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id1.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id1.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id1.pic}}"/>
+                                    <input type="hidden" name="username" id="username2" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid2" value="{{a_prod_id1.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink2" value="{{a_prod_id1.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic2" value="{{a_prod_id1.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" id="button2">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -184,10 +184,10 @@ img {
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form3">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id2.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id2.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id2.pic}}"/>
+                                    <input type="hidden" name="username" id="username3" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid3" value="{{f_prod_id2.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink3" value="{{f_prod_id2.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic3" value="{{f_prod_id2.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -229,10 +229,10 @@ img {
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form4">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id2.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id2.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id2.pic}}"/>
+                                    <input type="hidden" name="username" id="username4" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid4" value="{{a_prod_id2.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink4" value="{{a_prod_id2.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic4" value="{{a_prod_id2.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -273,10 +273,10 @@ img {
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form5">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id3.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id3.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id3.pic}}"/>
+                                    <input type="hidden" name="username" id="username5" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid5" value="{{f_prod_id3.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink5" value="{{f_prod_id3.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic5" value="{{f_prod_id3.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -317,10 +317,10 @@ img {
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form6">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id3.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id3.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id3.pic}}"/>
+                                    <input type="hidden" name="username" id="username6" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid6" value="{{a_prod_id3.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink6" value="{{a_prod_id3.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic6" value="{{a_prod_id3.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -361,10 +361,10 @@ img {
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form7">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id4.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id4.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id4.pic}}"/>
+                                    <input type="hidden" name="username" id="username7" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid7" value="{{f_prod_id4.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink7" value="{{f_prod_id4.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic7" value="{{f_prod_id4.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -405,10 +405,10 @@ img {
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form8">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id4.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id4.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id4.pic}}"/>
+                                    <input type="hidden" name="username" id="username8" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid8" value="{{a_prod_id4.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink8" value="{{a_prod_id4.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic8" value="{{a_prod_id4.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -449,10 +449,10 @@ img {
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form9">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{f_prod_id5.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id5.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id5.pic}}"/>
+                                    <input type="hidden" name="username" id="username9" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid9" value="{{f_prod_id5.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink9" value="{{f_prod_id5.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic9" value="{{f_prod_id5.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -493,10 +493,10 @@ img {
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
                                 <form id = "post-form10">
-                                    <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                    <input type="hidden" name="productid" id="productid" value="{{a_prod_id5.id}}"/>
-                                    <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id5.link}}"/>
-                                    <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id5.pic}}"/>
+                                    <input type="hidden" name="username" id="username10" value="{{user.username}}"/>
+                                    <input type="hidden" name="productid" id="productid10" value="{{a_prod_id5.id}}"/>
+                                    <input type="hidden" name="productlink" id="productlink10" value="{{a_prod_id5.link}}"/>
+                                    <input type="hidden" name="productpic" id="productpic10" value="{{a_prod_id5.pic}}"/>
                                     <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
@@ -519,47 +519,6 @@ img {
                                 <script type='text/Javascript'></script>
                                 </body>
 
-                                <!-- <script type="text/javascript">
-                                    $(document).on('submit','#post-form1',function(e){
-                                      e.preventDefault();
-                                  
-                                      $.ajax({
-                                        type:'GET',
-                                        url:'/add_to_cart',
-                                        data:{
-                                            username:$('#username').val(),
-                                            productid:$('#productid').val(),
-                                            productlink:$('#productlink').val(),
-                                            productpic:$('#productpic').val(),
-                                            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
-                                        },
-                                        success: function(data){
-                                           alert(data)
-                                        }
-                                      });
-                                      //document.getElementById('message').value = ''
-                                    });
-                                  </script> -->
-                                <!-- <script type="text/javascript">
-                                    $('form.form1').on('submit','#post-form1',function(e){
-                                        e.preventDefault();
-                                        $.ajax({
-                                        type:'GET',
-                                        url:'/add_to_cart',
-                                        data:{
-                                            username:$('#username').val(),
-                                            productid:$('#productid').val(),
-                                            productlink:$('#productlink').val(),
-                                            productpic:$('#productpic').val(),
-                                            //csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
-                                        },
-                                        success: function(data){
-                                           alert(data)
-                                        }
-                                      });
-                                      //document.getElementById('message').value = ''
-                                    });
-                                </script> -->
                                 <script>
                                     $('#post-form1').on('submit', function(e){
                                         
@@ -569,10 +528,10 @@ img {
                                            type : "POST", 
                                            url: '/add_to_cart',
                                            data: {
-                                            username : $('#username').val(),
-                                            productid : $('#productid').val(),
-                                            productlink : $('#productlink').val(),
-                                            productpic : $('#productpic').val(),
+                                            username : $('#username1').val(),
+                                            productid : $('#productid1').val(),
+                                            productlink : $('#productlink1').val(),
+                                            productpic : $('#productpic1').val(),
                                             csrfmiddlewaretoken: '{{ csrf_token }}',
                                             dataType: "json",
                                            },
@@ -600,10 +559,257 @@ img {
                                            type : "POST", 
                                            url: '/add_to_cart',
                                            data: {
-                                            username : $('#username').val(),
-                                            productid : $('#productid').val(),
-                                            productlink : $('#productlink').val(),
-                                            productpic : $('#productpic').val(),
+                                            username : $('#username2').val(),
+                                            productid : $('#productid2').val(),
+                                            productlink : $('#productlink2').val(),
+                                            productpic : $('#productpic2').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form3').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username3').val(),
+                                            productid : $('#productid3').val(),
+                                            productlink : $('#productlink3').val(),
+                                            productpic : $('#productpic3').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form4').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username4').val(),
+                                            productid : $('#productid4').val(),
+                                            productlink : $('#productlink4').val(),
+                                            productpic : $('#productpic4').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form5').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username5').val(),
+                                            productid : $('#productid5').val(),
+                                            productlink : $('#productlink5').val(),
+                                            productpic : $('#productpic5').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form6').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username6').val(),
+                                            productid : $('#productid6').val(),
+                                            productlink : $('#productlink6').val(),
+                                            productpic : $('#productpic6').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form7').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username7').val(),
+                                            productid : $('#productid7').val(),
+                                            productlink : $('#productlink7').val(),
+                                            productpic : $('#productpic7').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form8').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username8').val(),
+                                            productid : $('#productid8').val(),
+                                            productlink : $('#productlink8').val(),
+                                            productpic : $('#productpic8').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+                                 <script>
+                                    $('#post-form9').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username9').val(),
+                                            productid : $('#productid9').val(),
+                                            productlink : $('#productlink9').val(),
+                                            productpic : $('#productpic9').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+
+                                 <script>
+                                    $('#post-form10').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username10').val(),
+                                            productid : $('#productid10').val(),
+                                            productlink : $('#productlink10').val(),
+                                            productpic : $('#productpic10').val(),
                                             csrfmiddlewaretoken: '{{ csrf_token }}',
                                             dataType: "json",
                                            },
