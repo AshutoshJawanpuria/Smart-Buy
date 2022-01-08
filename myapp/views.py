@@ -69,10 +69,14 @@ def logout(request):
     return redirect('/')
 
 def add_to_cart(request):
-    username = request.GET['username']
-    productid = request.GET['productid']
-    productlink = request.GET['productlink']
-    productpic = request.GET['productpic']
+    username = request.POST.get('username', None)
+    productid = request.POST.get('productid', None)
+    productlink = request.POST.get('productlink', None)
+    productpic = request.POST.get('productpic', None)
+    print(username)
+    print(productid)
+    # print(productlink)
+    # print(productpic)
     client=pymongo.MongoClient("mongodb://localhost:27017/")
     db=client[username]
     collection=db['products']
@@ -80,7 +84,7 @@ def add_to_cart(request):
     ispresent=collection.find_one({'link' :productlink})
     if(ispresent==None): 
      collection.insert_one(dictionary)
-    return render(request,'mylist1.html',{'username': username,'productid': productid,'productlink': productlink,'productpic': productpic})
+    return HttpResponse('Item Added to Cart')
 
 def My_Cart(request):
    username=request.GET['username']
@@ -93,7 +97,7 @@ def My_Cart(request):
       cart_product.id=product['title']
       cart_product.link=product['link']
       cart_product.pic=product['image']
-      print(product)
+      #print(product)
       mycart.append(cart_product)
   
    return render(request,'mylist.html',{'mycart' : mycart})
