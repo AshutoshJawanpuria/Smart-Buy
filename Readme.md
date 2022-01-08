@@ -30,6 +30,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#MILESTONES-ACHIEVED">MILESTONES ACHIEVED</a></li>
+    <li><a href="#UNIQUE">UNIQUE</a></li>
     <li><a href="#Team">Team</a></li>
     <li><a href="#Domain-Of-Project">Domain Of Project</a></li>
     <li>
@@ -51,15 +53,20 @@
 Smart Buy is an E-Commerce Website that Helps Users to compare prices of different products across the internet.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites. All this data is then tailored in a structured manner for easy understanding.
 <br/>
 Users Can Also Create Profiles and Save the Products or Can Order Them directly.
+<br/>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## MILESTONES ACHIEVED -
+## MILESTONES ACHIEVED
 * Flipkart Search - Product Search and its image and URL Display
 * Amazon Search - Product Search and its image and URL Display
 * Used Django framework For Running Web scraping Python Script At Backend.
 * Added "Add To Card" Feature. 
 * Used Mongodb as Database For Saving Products.
 * Used Django Models For User Sign up and Authentication.
+
+## Unique
+   Initially We got stuck in product scraping at Amazon.The E-commerce websites such as Amazon and Flipkart have different structure for electronic and household products.We Corrected It using Two for Loops for covering maximum range of products.Additionally Due to High Security At Amazon Our Requests were often blocked.We fixed This Issue By Sending Requests at random time intervals.
 
 ## Team : #include
 
