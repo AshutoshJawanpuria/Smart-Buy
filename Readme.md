@@ -20,7 +20,6 @@
 </div>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -31,7 +30,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#Team-name">Team</a></li>
+    <li><a href="#Team">Team</a></li>
     <li><a href="#Domain-Of-Project">Domain Of Project</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -54,6 +53,14 @@ Smart Buy is an E-Commerce Website that Helps Users to compare prices of differe
 Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## MILESTONES ACHIEVED -
+* Flipkart Search - Product Search and its image and URL Display
+* Amazon Search - Product Search and its image and URL Display
+* Used Django framework For Running Web scraping Python Script At Backend.
+* Added "Add To Card" Feature. 
+* Used Mongodb as Database For Saving Products.
+* Used Django Models For User Sign up and Authentication.
+
 ## Team : #include
 
 *  Chandrachud Shrivastava
@@ -62,6 +69,7 @@ Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 
 ## Domain Of Project
 *  Web development
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
 
@@ -95,9 +103,7 @@ To get a local copy up and running follow these simple example steps.
   ```sh
   pip install pymongo
   ```
-
-
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Installation
 
@@ -123,18 +129,6 @@ Or You Can
 Search Results can be made More Accurate with help of different algorithms.
 <br/>
 Webpages can be made more attractive and interactive.
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
