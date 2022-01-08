@@ -9,7 +9,7 @@
                                 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
                                 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
                                 <style>body {
-    background: linear-gradient(to right, #c04848, #480048);
+    background: linear-gradient(to right, #2872e2, #1f0048);
     min-height: 100vh
 }
 
@@ -25,12 +25,6 @@ img {
                                 <nav class="navbar navbar-light bg-light static-top">
                                     <div class="container">
                                         <a class="navbar-brand" href="#!">Smart Buy</a>
-                                        <!-- <a class="btn btn-primary" href="#signup">Sign Up</a>
-                                        <a class="btn btn-primary" href="#signup">Log In</a> -->
-                                        <!-- <button type="button" class="btn btn-outline-primary">Sign Up</button>
-                                        <button type="button" class="btn btn-outline-primary">Log In</button> -->
-                                        <!-- <button class="btn btn-outline-primary mr-1" href="#">Sign up</button>
-                                        <button class="btn btn-outline-primary" href="#">Login</button> -->
                                         {% if user.is_authenticated %}
                                         <!-- <form action="logout" method="GET">
                                             <button type="submit" class="btn btn-outline-primary" >Log Out</button>
@@ -52,20 +46,15 @@ img {
                                         <form action="login" method="GET">
                                         <button type="submit" class="btn btn-outline-primary" >Log In</button>
                                          </form>
-                                        <!-- <button type="submit" btn btn-outline-primary mr-1" href="register">Sign up</button>
-                                        <button class="btn btn-outline-primary" href="#">Log In</button> -->
-                                            <!-- <button type="button" class="btn btn-secondary">Right</button> -->
                                         </div>
                                         {% endif %}
-                                        <!-- <button type="button" class="btn btn-outline-warning">Log In</button>
-                                        <button type="button" class="btn btn-outline-warning">Sign up</button> -->
                                     </div>
                                 </nav>
                                 <body oncontextmenu='return false' class='snippet-body'>
                                 <div class="container py-5">
                                     <div class="row text-center text-white mb-5">
                                         <div class="col-lg-7 mx-auto">
-                                            <h1 class="display-4">My Cart</h1>
+                                            <h1 class="display-4">{{username}}'s Cart</h1>
                                         </div>
                                     </div>
 {%for products in mycart%}
@@ -79,34 +68,18 @@ img {
                 <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                     <div class="media-body order-2 order-lg-1">
                         <a style="text-decoration: none;color: black;" href={{products.link}} target="_blank">
-                        <h5 class="mt-0 font-weight-bold mb-2">{{products.id|truncatewords:15}}</h5>
+                        <h5 class="mt-0 font-weight-bold mb-2">{{products.id}}</h5>
                         </a>
-                        <!-- <p class="font-italic text-muted mb-0 small">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p> -->
-                        <!-- <div class="d-flex align-items-center justify-content-between mt-1">
-                            <h5 class="font-weight-bold my-2" style="color: rgb(48, 146, 226);">₹ {{f_prod_id1.price}}</h5>
-                           
-                            <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
-                            {% if user.is_authenticated %}
-                            <form action="add_to_cart" method="GET">
-                                <input type="hidden" name="username" id="username" value="{{user.username}}"/>
-                                <input type="hidden" name="productid" id="productid" value="{{f_prod_id1.id}}"/>
-                                <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id1.link}}"/>
-                                <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id1.pic}}"/>
-                                <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
-                                </form>
-                            {% else %}
-                            <form action="register" method="GET">
-                                <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
-                            </form>
-                            {% endif %}
-                        </div> -->
-                    </div><img src={{products.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
+                        <form id = "post-form10">
+                            <input type="hidden" name="username" id="username10" value="{{user.username}}"/>
+                            <input type="hidden" name="productpic" id="productpic10" value="{{a_prod_id5.pic}}"/>
+                            <button type="submit" class="btn btn-outline-danger" value="Send">Remove</button>
+                        </form>
+                    </div>
+                    <img src={{products.pic}} alt="Image_could_Not_Be_Found" width="200" class="ml-lg-5 order-1 order-lg-2">
                 </div> <!-- End -->
             </li> <!-- End -->
         </ul> <!-- End -->
     </div>
 </div>
-<!-- <h1>{{products.id}}</h1>
-<h1>{{products.link}}</h1>
-<h1>{{products.pic}}</h1> -->
 {%endfor%}

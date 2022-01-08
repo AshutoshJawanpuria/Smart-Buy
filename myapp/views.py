@@ -100,7 +100,7 @@ def My_Cart(request):
       #print(product)
       mycart.append(cart_product)
   
-   return render(request,'mylist.html',{'mycart' : mycart})
+   return render(request,'mylist.html',{'mycart' : mycart,'username' : username},)
 
 
 def counter(request):
@@ -383,10 +383,5 @@ def counter(request):
             a_prod_id5.pic = j
            ct += 1
       l += 1
-    # flip_pord_list = [f_prod_id1,a_prod_id1,f_prod_id2,a_prod_id2,f_prod_id3,a_prod_id3,f_prod_id4,a_prod_id4,f_prod_id5,a_prod_id5]
-    # for i in flip_pord_list:
-    #     pass
+
     return render(request,'counter.html',{'f_prod_id1': f_prod_id1,'f_prod_id2': f_prod_id2,'f_prod_id3': f_prod_id3,'f_prod_id4': f_prod_id4,'f_prod_id5': f_prod_id5,'f_prod_id6': f_prod_id6,'a_prod_id1': a_prod_id1,'a_prod_id2': a_prod_id2,'a_prod_id3': a_prod_id3,'a_prod_id4': a_prod_id4,'a_prod_id5': a_prod_id5})
-    # return render(request,'counter.html',{'flip_pord_list': flip_pord_list})
-    #title = soup.title
-    #return render(request,'counter.html',{'products': prod_id}) 
