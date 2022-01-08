@@ -8,6 +8,8 @@
                                 <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
                                 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
                                 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                                <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
                                 <style>body {
     background: linear-gradient(to right, #c04848, #480048);
     min-height: 100vh
@@ -93,12 +95,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form1" method="POST">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{f_prod_id1.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id1.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id1.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" id="button1">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -137,12 +139,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form2" method="POST">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{a_prod_id1.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id1.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id1.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" id="button2">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -181,12 +183,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form3">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{f_prod_id2.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id2.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id2.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -226,12 +228,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form4">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{a_prod_id2.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id2.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id2.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -270,12 +272,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form5">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{f_prod_id3.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id3.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id3.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -314,12 +316,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form6">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{a_prod_id3.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id3.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id3.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -358,12 +360,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form7">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{f_prod_id4.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id4.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id4.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -402,12 +404,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form8">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{a_prod_id4.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id4.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id4.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -446,12 +448,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/flogo.png' %}" alt="Flipkart Logo" style="width: 50px;;height: 30px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form9">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{f_prod_id5.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{f_prod_id5.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{f_prod_id5.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -490,12 +492,12 @@ img {
                                 </ul> -->
                                 <img src="{% static 'assets/alogo.png' %}" alt="Amazon Logo" style="width: 60px;;height:20px;" />
                                 {% if user.is_authenticated %}
-                                <form action="add_to_cart" method="GET">
+                                <form id = "post-form10">
                                     <input type="hidden" name="username" id="username" value="{{user.username}}"/>
                                     <input type="hidden" name="productid" id="productid" value="{{a_prod_id5.id}}"/>
                                     <input type="hidden" name="productlink" id="productlink" value="{{a_prod_id5.link}}"/>
                                     <input type="hidden" name="productpic" id="productpic" value="{{a_prod_id5.pic}}"/>
-                                    <button type="submit" class="btn btn-outline-primary" >Add to cart</button>
+                                    <button type="submit" class="btn btn-outline-primary" value="Send">Add to cart</button>
                                     </form>
                                 {% else %}
                                 <form action="register" method="GET">
@@ -516,4 +518,107 @@ img {
                                 <script type='text/javascript' src=''></script>
                                 <script type='text/Javascript'></script>
                                 </body>
+
+                                <!-- <script type="text/javascript">
+                                    $(document).on('submit','#post-form1',function(e){
+                                      e.preventDefault();
+                                  
+                                      $.ajax({
+                                        type:'GET',
+                                        url:'/add_to_cart',
+                                        data:{
+                                            username:$('#username').val(),
+                                            productid:$('#productid').val(),
+                                            productlink:$('#productlink').val(),
+                                            productpic:$('#productpic').val(),
+                                            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                                        },
+                                        success: function(data){
+                                           alert(data)
+                                        }
+                                      });
+                                      //document.getElementById('message').value = ''
+                                    });
+                                  </script> -->
+                                <!-- <script type="text/javascript">
+                                    $('form.form1').on('submit','#post-form1',function(e){
+                                        e.preventDefault();
+                                        $.ajax({
+                                        type:'GET',
+                                        url:'/add_to_cart',
+                                        data:{
+                                            username:$('#username').val(),
+                                            productid:$('#productid').val(),
+                                            productlink:$('#productlink').val(),
+                                            productpic:$('#productpic').val(),
+                                            //csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                                        },
+                                        success: function(data){
+                                           alert(data)
+                                        }
+                                      });
+                                      //document.getElementById('message').value = ''
+                                    });
+                                </script> -->
+                                <script>
+                                    $('#post-form1').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username').val(),
+                                            productid : $('#productid').val(),
+                                            productlink : $('#productlink').val(),
+                                            productpic : $('#productpic').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
+                                 <script>
+                                    $('#post-form2').on('submit', function(e){
+                                        
+                                    e.preventDefault();
+                                    var form = $(this).closest('form');
+                                      $.ajax({
+                                           type : "POST", 
+                                           url: '/add_to_cart',
+                                           data: {
+                                            username : $('#username').val(),
+                                            productid : $('#productid').val(),
+                                            productlink : $('#productlink').val(),
+                                            productpic : $('#productpic').val(),
+                                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                                            dataType: "json",
+                                           },
+                                           
+                                           success: function(data){
+                                              $('#output').html(data.msg) /* response message */
+                                           },
+                                    
+                                           failure: function() {
+                                               
+                                           }
+                                    
+                                       });
+                                    
+                                    
+                                            });    
+                                 </script>
                             </html>
