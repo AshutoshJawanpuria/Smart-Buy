@@ -13,9 +13,9 @@
     <br />
     <!-- <a href="https://github.com/github_username/repo_name">View Demo</a>
     · -->
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://www.linkedin.com/in/chandrachud-shrivastava-2b1680201/">Request Feature</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://www.linkedin.com/in/ashutosh-jawanpuria-898166177/">Report Bug</a>
   </p>
 </div>
 
@@ -54,6 +54,9 @@ Smart Buy is an E-Commerce Website that Helps Users to compare prices of differe
 <br/>
 Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 <br/>
+The Project mainly consist of three parts.First one is Web Scraping Python script which uses BeautifulSoup for fetching data from Different E-Commerce Websites.
+We Have Used Django framework for integrating the Python Script with Webpages.We have also Used Django For user Signup and Authentication and for maintaining User's Database.
+For Product Database we Have Used Mongodb as it has PyMongo library which stores Data In dictionary like format which can easily be accessed.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -114,8 +117,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-Our Website is Hosted On Heroku [https://example.com](https://example.com)
-Or You Can
 1. Clone the repo
    ```sh
    git clone https://github.com/AshutoshJawanpuria/Smart-Buy.git
