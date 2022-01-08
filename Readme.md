@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h2 align="center">Smart Buy</h2>
+<h1 align="center">Smart Buy</h1>
 
   <p align="center">
     Smart Buy helps users to Compare Products across different E-Commerce websites like Amazon & Flipkart.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites.
@@ -51,7 +51,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Smart Buy is an E-Commerce Website that Helps Users to compare prices of different products across the internet.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites. All this data is then tailored in a structured manner for your easy understanding.
+Smart Buy is an E-Commerce Website that Helps Users to compare prices of different products across the internet.It works by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites. All this data is then tailored in a structured manner for easy understanding.
+<br/>
 Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,9 +62,10 @@ Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 *  Ashutosh Jawanpuria
 *  Chirag Jha
 
-## Domain Of Project : Web development
+## Domain Of Project :
+*  Web development
 
-## TECH STACK USED
+## Built With
 
 * [Python](https://www.python.org)
 * [Bootstrap](https://getbootstrap.com)
@@ -77,7 +79,6 @@ Users Can Also Create Profiles and Save the Products or Can Order Them directly.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -107,7 +108,7 @@ Or You Can
    ```sh
    git clone https://github.com/AshutoshJawanpuria/Smart-Buy.git
    ```
-2. Install the Packages Mentioned in Prerequisites
+2. Install the Packages Mentioned in Prerequisites.
 3. Using A Terminal in Directory of The Project Run the Following Command -
    ```
    python manage.py runserver
