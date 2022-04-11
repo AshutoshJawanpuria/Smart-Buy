@@ -15,6 +15,8 @@ import time
 from .models import products
 from random import randint
 import pymongo
+import certifi
+# import dnspython
 
 # Create your views here.
 def index(request):
@@ -77,14 +79,15 @@ def add_to_cart(request):
     print(productid)
     print(productlink)
     #print(productpic)
-    client=pymongo.MongoClient("mongodb://localhost:27017/")
+    ca=certifi.where()
+    client=pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.h5ypc.mongodb.net/",tlsCAFile=ca)
     db=client[username]
     collection=db['products']
     dictionary={'link':productlink,'title':productid,'image':productpic}
     #ispresent=None
-    ispresent=collection.find({'title': productid})
+    ispresent=collection.find({'title':productid})
     print(ispresent)
-    counter=collection.count_documents({'title': productid})
+    counter=collection.count_documents({'title':productid})
     print(counter)
     # for item in ispresent:
     #  print(item)
@@ -94,7 +97,8 @@ def add_to_cart(request):
 
 def My_Cart(request):
    username=request.GET['username']
-   client=pymongo.MongoClient("mongodb://localhost:27017/")
+   ca = certifi.where()
+   client=pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.h5ypc.mongodb.net/",tlsCAFile=ca)
    db=client[username]
    collection=db['products']
    map_m=defaultdict(list)
